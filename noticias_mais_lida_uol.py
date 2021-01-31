@@ -16,9 +16,9 @@ class telegram:
         while True:
             now = datetime.now()
             hora_agora = now.strftime("%H:%M:%S")
-            hora_de_rodar = hora_agora[0:8] == "06:15:00" or hora_agora[0:8] == "12:15:00" or hora_agora[0:8] == "18:15:00"
-            if hora_de_rodar != False:
-                bot.noticia(hora_agora)
+            #hora_de_rodar = hora_agora[0:8] == "06:15:00" or hora_agora[0:8] == "12:15:00" or hora_agora[0:8] == "18:15:00"
+            #if hora_de_rodar != False:
+            bot.noticia(hora_agora)
 
     def noticia(self,hora_agora):
         global inf_chuva, inf_temp_min, inf_temp_max
@@ -48,8 +48,8 @@ class telegram:
                        + '.: ' + ps[9].text + '\n'
                        + '.: ' + ps[10].text + '\n'
                        + '.: ' + ps[11].text + '\n\n'
-                       + "🧾 Henry's trazendo as melhores informações do DIA, pra você! " + '\n'
-                       + "🌎 https://www.uol.com.br/"
+                       + "Henry's trazendo as melhores informações do DIA, pra você! " + '\n'
+                       + "https://www.uol.com.br/"
                        , chat_id)
         #breakpoint()
 
